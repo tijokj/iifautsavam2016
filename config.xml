@@ -30,7 +30,8 @@ versionCode = "10">
   <feature name="StatusBar">
     <param name="ios-package" onload="true" value="CDVStatusBar"/>
   </feature>
-  <splash src="resources\android\splash\drawable-land-xhdpi-screen"/>
+  <splash src="resources\android\splash\drawable-land-xhdpi-screen.png"/>
+  <icon src="resources\ios\icon\icon-40.png"/>
   <preference name="fullscreen" value="true" />
   <preference name="KeepRunning" value="true"/>
   <preference name="ErrorUrl" value="index.html"/>
