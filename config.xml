@@ -11,11 +11,11 @@ versionCode = "10">
   <description>
         IIFA Utsavam 2016, First South indian 4 Language Filim awards
     </description>
-  <author email="you@example.com" href="http://iifautsavam.com/">
+  <author email="event@wizcraftworld.com" href="http://iifautsavam.com/">
       Tijo Joseph
     </author>
   <content src="index.html"/>
-  <access origin="*"/>
+  
   <preference name="webviewbounce" value="false"/>
   <preference name="UIWebViewBounce" value="false"/>
   <preference name="DisallowOverscroll" value="true"/>
@@ -47,13 +47,14 @@ versionCode = "10">
   <icon src="icon.png"/>
   
   <platform name="android">
-	<icon src="resources\android\icon\drawable-mdpi-icon.png" platform="android" width="180" height="180" />
+	<allow-intent href="market:*" />
     <icon src="resources\android\icon\drawable-ldpi-icon.png" platform="android" density="ldpi"/>
     <icon src="resources\android\icon\drawable-mdpi-icon.png" platform="android" density="mdpi"/>
     <icon src="resources\android\icon\drawable-hdpi-icon.png" platform="android" density="hdpi"/>
     <icon src="resources\android\icon\drawable-xhdpi-icon.png" platform="android" density="xhdpi"/>
     <icon src="resources\android\icon\drawable-xxhdpi-icon.png" platform="android" density="xxhdpi"/>
     <icon src="resources\android\icon\drawable-xxxhdpi-icon.png" platform="android" density="xxxhdpi"/>
+	<icon src="resources\android\icon\drawable-xxxhdpi-icon.png" platform="android" qualifier="fr-xxhdpi" />
     <splash src="resources\android\splash\drawable-land-ldpi-screen.png" platform="android" density="land-ldpi"/>
     <splash src="resources\android\splash\drawable-land-mdpi-screen.png" platform="android" density="land-mdpi"/>
     <splash src="resources\android\splash\drawable-land-hdpi-screen.png" platform="android" density="land-hdpi"/>
@@ -112,5 +113,30 @@ versionCode = "10">
     <preference name="SplashScreenHeight" value="300" /> <!-- defaults to "200" -->
 </platform>
 
-  <engine name="browser" spec="~4.0.0"/>
+  <!-- plugins -->
+<gap:plugin name="org.apache.cordova.device" source="npm" />
+<gap:plugin name="org.apache.cordova.network-information" source="npm" />
+<gap:plugin name="org.apache.cordova.dialogs" source="npm" />
+<gap:plugin name="org.apache.cordova.inappbrowser" source="npm" />
+<gap:plugin name="de.appplant.cordova.plugin.hidden-statusbar-overlay" version="1.2.0" />
+<gap:plugin name="org.apache.cordova.splashscreen" version="0.3.4" />
+
+<!-- android crosswalk plugins (comment out on iOS build) -->
+<gap:plugin name="org.crosswalk.engine" version="1.3.0" />
+<gap:plugin name="com.indigoway.cordova.whitelist.whitelistplugin" />
+<!-- external ressource access -->
+<access origin="*" />
+<access uri="http://p1h-app.dk" subdomains="true" />
+<access origin="tel:*" launch-external="yes" />
+<access origin="geo:*" launch-external="yes" />
+<allow-intent href="http://*/*" />
+<allow-intent href="https://*/*" />
+<allow-intent href="tel:*" />
+<allow-intent href="sms:*" />
+<allow-intent href="mailto:*" />
+<allow-intent href="geo:*" />
+
+<engine name="android" spec="^4.0.0" />
+<engine name="browser" spec="~4.0.0"/>
+  
 </widget>
