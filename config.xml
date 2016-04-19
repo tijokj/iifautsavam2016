@@ -28,8 +28,15 @@ versionCode = "10">
   <preference name="xwalkCommandLine" value="--disable-pull-to-refresh-effect"/>
   <preference name="xwalkMode" value="embedded"/>
   <preference name="xwalkMultipleApk" value="true"/>
+
+  <feature name="SplashScreen">
+	<param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
+  </feature>
   <feature name="StatusBar">
-    <param name="ios-package" onload="true" value="CDVStatusBar"/>
+	<param name="ios-package" onload="true" value="CDVStatusBar"/>
+  </feature>
+  <feature name="SplashScreen">
+		<param name="ios-package" value="CDVSplashScreen" />
   </feature>
   
   <preference name="fullscreen" value="true" />
