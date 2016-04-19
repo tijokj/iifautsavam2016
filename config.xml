@@ -90,5 +90,4 @@ versionCode = "10">
     <splash src="resources\wp8\splash\SplashScreenImage.png" width="768" height="1280"/>
   </platform>
   <engine name="browser" spec="~4.0.0"/>
-  <icon src="resources\android\icon\drawable-xhdpi-icon.png"/>
 </widget>
