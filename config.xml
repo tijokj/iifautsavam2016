@@ -21,7 +21,8 @@ versionCode = "10">
   <preference name="DisallowOverscroll" value="true"/>
   <preference name="android-minSdkVersion" value="16"/>
   <preference name="BackupWebStorage" value="none"/>
-  <preference name="SplashScreen" value="screen"/>
+  <!-- <preference name="SplashScreen" value="screen"/> -->
+  <preference name="SplashScreen" value="splash"/>
   <preference name="SplashScreenDelay" value="10000"/>
   <preference name="xwalkVersion" value="17+"/>
   <preference name="xwalkCommandLine" value="--disable-pull-to-refresh-effect"/>
@@ -30,11 +31,14 @@ versionCode = "10">
   <feature name="StatusBar">
     <param name="ios-package" onload="true" value="CDVStatusBar"/>
   </feature>
-  <splash src="resources\android\splash\drawable-land-xhdpi-screen.png"/>
-  <icon src="resources\ios\icon\icon-40.png"/>
+  
   <preference name="fullscreen" value="true" />
   <preference name="KeepRunning" value="true"/>
   <preference name="ErrorUrl" value="index.html"/>
+  
+  <splash src="splash.png"/>
+  <icon src="icon.png"/>
+  
   <platform name="android">
 	<icon src="resources\android\icon\drawable-mdpi-icon.png" platform="android" width="180" height="180" />
     <icon src="resources\android\icon\drawable-ldpi-icon.png" platform="android" density="ldpi"/>
@@ -56,6 +60,7 @@ versionCode = "10">
     <splash src="resources\android\splash\drawable-port-xxhdpi-screen.png" platform="android" density="port-xxhdpi"/>
     <splash src="resources\android\splash\drawable-port-xxxhdpi-screen.png" platform="android" density="port-xxxhdpi"/>
   </platform>
+  
   <platform name="ios">
     <icon src="resources\ios\icon\icon.png" width="57" height="57"/>
     <icon src="resources\ios\icon\icon@2x.png" width="114" height="114"/>
@@ -84,10 +89,12 @@ versionCode = "10">
     <splash src="resources\ios\splash\Default@2x~iphone.png" width="640" height="960"/>
     <splash src="resources\ios\splash\Default~iphone.png" width="320" height="480"/>
   </platform>
+  
   <platform name="wp8">
     <icon src="resources\wp8\icon\ApplicationIcon.png" width="99" height="99"/>
     <icon src="resources\wp8\icon\Background.png" width="159" height="159"/>
     <splash src="resources\wp8\splash\SplashScreenImage.png" width="768" height="1280"/>
   </platform>
+  
   <engine name="browser" spec="~4.0.0"/>
 </widget>
